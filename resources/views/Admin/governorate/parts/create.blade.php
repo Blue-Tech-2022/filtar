@@ -1,0 +1,19 @@
+<form id="addForm" class="addForm" method="POST" action="{{route('governorate.store')}}">
+    @csrf
+
+    <input type="hidden" class="form-control" name="country_id" value="{{$country_id}}">
+
+    <div class="form-group">
+        <label for="governorate_name_ar" class="form-control-label">العنوان</label>
+        <input type="text" class="form-control" name="governorate_name_ar">
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+        <button type="submit" class="btn btn-primary" id="addButton">اضافة</button>
+    </div>
+</form>
+
+
+<script>
+    $('.dropify').dropify()
+</script>
